@@ -1,38 +1,395 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Main Layout */
+.app-container {
   min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+  padding: 2rem;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #312e81;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+/* Input Section */
+.input-section {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.input-controls {
   display: flex;
-  flex-direction: column;
+  gap: 0.75rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.text-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-family: monospace;
+  font-size: 1.125rem;
+  transition: border-color 0.2s;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background: #4f46e5;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  background: #4338ca;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+/* Tabs */
+.tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.tab-active {
+  background: white;
+  color: #4f46e5;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.tab-inactive {
+  background: #c7d2fe;
+  color: #3730a3;
+}
+
+.tab-inactive:hover {
+  background: #a5b4fc;
+}
+
+/* Machine Sections */
+.machine-section {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.machine-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #312e81;
+  margin-bottom: 0.5rem;
+}
+
+.machine-description {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+/* Diagram Container */
+.diagram-container {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.state-text {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.state-text-special {
+  fill: #dc2626;
+}
+
+/* Legends */
+.legend {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.legend-blue {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+}
+
+.legend-amber {
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+}
+
+.legend-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.legend-blue .legend-title {
+  color: #1e40af;
+}
+
+.legend-amber .legend-title {
+  color: #92400e;
+}
+
+.legend-list {
+  font-size: 0.875rem;
+  list-style: none;
+}
+
+.legend-blue .legend-list {
+  color: #1e40af;
+}
+
+.legend-amber .legend-list {
+  color: #92400e;
+}
+
+.code-text {
+  font-family: monospace;
+  font-weight: 500;
+}
+
+.code-text-special {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* Execution Section */
+.execution-section {
+  margin-bottom: 1.5rem;
+}
+
+.execution-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.execution-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background: #4f46e5;
+  color: white;
+}
+
+.table-cell {
+  border: 1px solid #6366f1;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.table-cell-center {
+  text-align: center;
+}
+
+.table-cell-input {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.table-cell-state {
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.table-row-even {
+  background: #f9fafb;
+}
+
+.table-row-odd {
+  background: white;
+}
+
+.output-highlight {
+  color: #dc2626;
+}
+
+.output-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #e0e7ff;
+  border-radius: 0.5rem;
+}
+
+.output-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #312e81;
+}
+
+.output-value {
+  font-family: monospace;
+  font-size: 1.125rem;
+  margin-left: 0.5rem;
+}
+
+/* Differences Section */
+.differences-section {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.differences-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #312e81;
+  margin-bottom: 1rem;
+}
+
+.differences-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.difference-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.difference-card-blue {
+  background: #dbeafe;
+}
+
+.difference-card-amber {
+  background: #fef3c7;
+}
+
+.difference-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.difference-card-blue .difference-title {
+  color: #1e40af;
+}
+
+.difference-card-amber .difference-title {
+  color: #92400e;
+}
+
+.difference-list {
+  font-size: 0.875rem;
+  list-style: none;
+  color: #374151;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .input-controls {
+    flex-direction: column;
+  }
+  
+  .differences-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs-container {
+    flex-direction: column;
+  }
+  
+  .tab {
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
