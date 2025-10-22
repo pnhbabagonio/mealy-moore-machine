@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pnhbabagonio/mealy-moore-machine/static/css/main.3d47c7ea.css",
-    "main.js": "/pnhbabagonio/mealy-moore-machine/static/js/main.1c5fe571.js",
-    "static/js/453.c2cc7eb0.chunk.js": "/pnhbabagonio/mealy-moore-machine/static/js/453.c2cc7eb0.chunk.js",
-    "index.html": "/pnhbabagonio/mealy-moore-machine/index.html",
-    "main.3d47c7ea.css.map": "/pnhbabagonio/mealy-moore-machine/static/css/main.3d47c7ea.css.map",
-    "main.1c5fe571.js.map": "/pnhbabagonio/mealy-moore-machine/static/js/main.1c5fe571.js.map",
-    "453.c2cc7eb0.chunk.js.map": "/pnhbabagonio/mealy-moore-machine/static/js/453.c2cc7eb0.chunk.js.map"
+    "main.css": "/mealy-moore-machine/static/css/main.3d47c7ea.css",
+    "main.js": "/mealy-moore-machine/static/js/main.6c27d837.js",
+    "static/js/453.c2cc7eb0.chunk.js": "/mealy-moore-machine/static/js/453.c2cc7eb0.chunk.js",
+    "index.html": "/mealy-moore-machine/index.html",
+    "main.3d47c7ea.css.map": "/mealy-moore-machine/static/css/main.3d47c7ea.css.map",
+    "main.6c27d837.js.map": "/mealy-moore-machine/static/js/main.6c27d837.js.map",
+    "453.c2cc7eb0.chunk.js.map": "/mealy-moore-machine/static/js/453.c2cc7eb0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3d47c7ea.css",
-    "static/js/main.1c5fe571.js"
+    "static/js/main.6c27d837.js"
   ]
 }
